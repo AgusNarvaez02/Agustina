@@ -1,1 +1,81 @@
 
+def MayorTem (lista):
+     maximo= -9999
+     for i in range(30):
+         for j in range(24):
+             if lista[i][j].getTemp() > maximo:
+                 maximo = lista[i][j].getTemp()
+     return print("Temperatura= {}, del dia {} y hora {}" .format(maximo, i, j))
+ 
+def MenorTem (lista):
+     minimo= 9999
+     for i in range(30):
+         for j in range(24):
+             if minimo < lista[i][j].getTemp():
+                 minimo = lista[i][j].getTemp()
+     return print(" Temperatura= {}, del dia {} y hora {}" .format(minimo, i, j))
+
+def MayorHum (lista):
+     max= -9999
+     for i in range(30):
+         for j in range(24):
+             if max< lista[i][j].getHum():
+                 max= lista[i][j].getHum()
+     return print("Maxima Humedad= {}, del dia {} y hora {}" .format(max, i, j))
+def MenorHum ( lista):
+     min= 9999
+     for i in range(30):
+         for j in range(24):
+             if min< lista[i][j].getHum():
+                 min= lista[i][j].getHum()
+     return print("Maxima Humedad= {}, del dia {} y hora {}" .format(min, i, j))
+ 
+def MayorPres (lista):
+     max= -9999
+     for i in range(30):
+         for j in range(24):
+             if max< lista[i][j].getPres():
+                 max= lista[i][j].getPres()
+     return print("Maxima Presion= {}, del dia {} y hora {}" .format(max, i, j))
+ 
+def MenorPres (lista):
+     min= 9999
+     for i in range(30):
+         for j in range(24):
+             if min< lista[i][j].getPres():
+                 min= lista[i][j].getPres()
+     return print("Maxima Presion= {}, del dia {} y hora {}" .format(min, i, j))
+ 
+def promedio (lista):
+ 
+     for i in range(30):
+         p=0
+         for j in range(24):
+             p += lista[i][j].getTemp()
+         print("En la hora {}, el promedio es {:.2f}" .format(j, p/30))
+ 
+def ej3 (lista):
+     d= int(input('Ingrese dia: '))
+     for j in range(24):
+         print('HORA, tTEMPERATURA, tHUMEDAD, tPRESION' )
+         print('t{}, t{}, t{}, t{} ' .format(j+1, lista[d-1][j].getTemp(), lista[d-1][j].getHum(), lista[d-1][j].getPres()))
+     
+def Menu( lista):
+    print ('\n 1. Mostrar \n\n 2. Temperatura Promedio\n \n 3. Listar valores \n \n 0. SALIR \n')
+    op= int(input('Ingrese una opcion: '))
+    while op!=0:
+        if op == 1:
+            print('TEMPERATURA \n')
+            print('Maxima= \n {} \n Minima{} \n' .format(MayorTem( lista), MenorTem(lista)))
+            print('HUMEDAD \n')
+            print('Maxima= \n {} \n Minima{} \n' .format(MayorHum( lista), MenorHum(lista)))
+            print('PRESION \n')
+            print('Maxima= \n {} \n Minima{} \n' .format(MayorPres( lista), MenorPres(lista)))       
+        elif op== 2:
+            promedio(lista)
+        elif op== 3:
+            ej3(lista)
+            
+        print ('\n 1. Mostrar \n\n 2. Temperatura Promedio\n \n 3. Listar valores \n \n 0. SALIR \n')
+        op= int(input('Ingrese una opcion: '))   
+    
