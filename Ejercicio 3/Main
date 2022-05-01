@@ -1,0 +1,24 @@
+from Menu import Menu
+from Registro import Registro
+import csv
+
+if __name__ == '__main__':
+    dia= 30
+    hora= 24
+    lista=[]
+    
+    for i in range (dia):
+        lista.append([0]*hora)
+    
+    archivo = open("VariablesdelMes.csv")
+    reader = csv.reader(archivo,delimiter= ',')
+    next(reader)
+    for line in reader:
+        dia= int(line[0])
+        hora= int(line[1])
+        
+        lista[dia-1][hora-1]= Registro(line[2], line[3], line[4])
+    archivo.close()
+    
+    #ejercicio 2
+Menu(lista)
