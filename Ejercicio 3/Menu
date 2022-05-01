@@ -11,7 +11,7 @@ def MenorTem (lista):
      minimo= 9999
      for i in range(30):
          for j in range(24):
-             if minimo < lista[i][j].getTemp():
+             if minimo > lista[i][j].getTemp():
                  minimo = lista[i][j].getTemp()
      return print(" Temperatura= {}, del dia {} y hora {}" .format(minimo, i, j))
 
@@ -26,7 +26,7 @@ def MenorHum ( lista):
      min= 9999
      for i in range(30):
          for j in range(24):
-             if min< lista[i][j].getHum():
+             if min> lista[i][j].getHum():
                  min= lista[i][j].getHum()
      return print("Maxima Humedad= {}, del dia {} y hora {}" .format(min, i, j))
  
@@ -42,7 +42,7 @@ def MenorPres (lista):
      min= 9999
      for i in range(30):
          for j in range(24):
-             if min< lista[i][j].getPres():
+             if min> lista[i][j].getPres():
                  min= lista[i][j].getPres()
      return print("Maxima Presion= {}, del dia {} y hora {}" .format(min, i, j))
  
