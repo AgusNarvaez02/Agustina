@@ -18,7 +18,7 @@ class Manejador_Viajeros:
         retorno= -1
         i=0
         ban= False
-        While (i < len(self.__lista) and (ban == False):
+        while i < len(self.__lista) and (ban == False):
             if num == self.__lista[i].GetnumViajero:
                 ban= True
                 retorno= i
