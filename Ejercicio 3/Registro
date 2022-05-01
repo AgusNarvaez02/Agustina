@@ -1,0 +1,16 @@
+class Registro:
+    __Temperatura= float
+    __Humedad= float
+    __Presion= float
+    
+    def __init__(self, Temperatura, Humedad, Presion):
+        self.__Temperatura= Temperatura
+        self.__Humedad= Humedad
+        self.__Presion= Presion
+    
+    def getTemp(self):
+        return self.__Temperatura
+    def getHum(self):
+        return self.__Humedad
+    def getPres(self):
+        return self.__Presion
