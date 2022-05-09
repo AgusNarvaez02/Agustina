@@ -5,7 +5,7 @@ class Menu:
     __insCama= ManejadorCama()
     __insMedic= ManejadorMedic()
     
-    def __init__(self, insCama, insMedic):
+    def __init__(self):
         self.__insCama= ManejadorCama()
         self.__insMedic= ManejadorMedic()
         self.__insCama.cargar()
