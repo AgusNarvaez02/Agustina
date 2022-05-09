@@ -1,7 +1,7 @@
 from Medicamento import Medicamento
 import csv
 class ManejadorMedic:
-    lista=[]
+    __lista=None
     
     def __init__(self):
         self.__lista=[]
@@ -15,8 +15,8 @@ class ManejadorMedic:
             self.__lista.append(obj)
         archivo.close()
     def mostrar (self):
-        for elem in self.__lista:
-            print('{}' .format(elem))
+        for elem in range(len(self.__lista)):
+            print(self.__lista[elem])
     
     def infromacion(self, c):
         t=0
