@@ -30,25 +30,25 @@ class ManejadorCama:
         retorno= -1
         band= False
         while i< len(self.__arreglo) and band== False:
-            if self.__arreglo[i].nomyap== p:
+            if self.__arreglo[i].getnomyap== p:
                 band= True
                 retorno= i
             else: i+=1
         return retorno
     def alta (self, fa, b):
-        self.__arreglo.getfechaalt[b]= fa
+        self.__arreglo[b].set_fechaalt= fa
     
     def mostrar_paci(self, b):
         print('Paciente: {} \t Cama: {} \t Habitacion: {} \n' .format(self.__arreglo[b].getnomyap(), self.__arreglo[b].getidCama(), self.__arreglo[b].gethab()))
         print('Diagnostico: {} \t Fecha de internacion: {} \n'.format(self.__arreglo[b].getdiag(), self.__arreglo[b].getfechaint()))
-        print ('Fecha de alta {} |n'.format(self.__arreglo[b].fechaalt()))
+        print ('Fecha de alta {} |n'.format(self.__arreglo[b].getfechaalta()))
     
     def datos_internado(self):
         d= input('Ingrese diagnostido del paciente \n')
-        for i in range(self.__arreglo):    
-            if self.__arreglo[i].getdiag == d and self.__arreglo.getest == True:
-                print(self.__arreglo[i])
+        for i in range(len(self.__arreglo)):    
+            if self.__arreglo[i].getdiag == d:
+                if self.__arreglo.getest == True:
+                    print(self.__arreglo[i])
             else:
-                print('El paciente no posee el diagnostico ingresado o fue dado de alta \n')
-                
-            
+                print('El paciente {} no posee el diagnostico ingresado o fue dado de alta \n' .format(self.__arreglo[i].getnomyap))
+           
