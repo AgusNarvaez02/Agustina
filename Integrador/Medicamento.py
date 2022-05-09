@@ -15,6 +15,10 @@ class Medicamento :
         self.__presentacion= presentacion
         self.__cant= cant
         self.__total= float(total)
+        
+    def __str__(self):
+        return('{},{},{},{},{},{},{}' .format(self.__idCama, self.__idMedicamento, self.__nom, self.__monodroga,self.__presentacion, self.__cant, self.__total))
+               
     def getidCam (self):
         return self.__idCama
     def getidMed (self):
